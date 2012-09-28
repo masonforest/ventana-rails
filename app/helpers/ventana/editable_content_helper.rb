@@ -11,7 +11,7 @@ module Ventana
           content_type: options[:type]
       ).first_or_create
 
-      (edit_link + editable_div)
+      (edit_link + editable_div).html_safe
     end
     private
 
