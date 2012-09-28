@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div>
+  <% if current_user.present? %>
+    Welcome <%= current_user.name %>
+    <%= link_to "Logout", session_path(1), :method => 'delete' %>
+  <% else %>
+    <%= link_to "Login", sessions_path, :method => 'post' %>
+  <% end %>
+  </div>
+<%= yield %>
+
+<%= javascript_include_tag "application" %>
+</body>
+</html>
