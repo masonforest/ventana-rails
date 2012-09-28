@@ -1,7 +1,7 @@
 Ventana
 ------
 
-Ventana is a lightweight rails content management system. It allows the developer to specify small blocks of unstructured editable content. This is helpful for landing pages and small blocks for unstructured copy text. If you need a full content management system you should use other [content management systems for rails](https://www.ruby-toolbox.com/categories/content_management_systems).
+Ventana is a lightweight rails content management system. It allows the developer to specify small blocks of unstructured editable content. This is helpful for landing pages and small blocks for unstructured copy text. If you need a full content management system you should use other [content management systems for rails](https://www.ruby-toolbox.com/categories/content_management_systems). If you are looking for a solution to easily manager your application code use [copycopter](https://github.com/thoughtbot/copycopter)
 
 
 Installation
@@ -11,6 +11,12 @@ Ventana is distributed as a gem, which is how it should be used in your app.
 Include the gem in your Gemfile:
 
     gem 'ventana', git: 'git://github.com/thoughtbot/ventana.git'
+
+Then run
+    rake ventana:install:migrations
+    rake db:migrate
+Finally add the following to you config/routes.rb
+    mount Ventana::Engine => "/ventana"
 
 Quick Start
 -----------

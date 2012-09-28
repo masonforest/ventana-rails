@@ -1,0 +1,5 @@
+<%= form_for(@editable_content) do |f|%>
+  <%= text_area_tag :value, @editable_content.value %>
+  <br>
+  <%= f.submit %{Save "#{@editable_content.key}"}%>
+<% end %>
