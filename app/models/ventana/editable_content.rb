@@ -13,5 +13,9 @@ module Ventana
         markdown.render(value.to_s)
       end
     end
+
+    def to_param
+      key
+    end
   end
 end

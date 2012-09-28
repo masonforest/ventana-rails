@@ -11,6 +11,14 @@ capybara-*.html
 /public/system/*
 /coverage/
 /spec/tmp/*
+/spec/dummy/.bundle
+/spec/dummy/vendor/bundle
+/spec/dummy/log/*
+/spec/dummy/tmp/*
+/spec/dummy/db/*.sqlite3
+/spec/dummy/public/system/*
+/spec/dummy/coverage/
+/spec/dummy/spec/tmp/*
 **.orig
 rerun.txt
 pickle-email-*.html

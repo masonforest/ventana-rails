@@ -1,3 +1,5 @@
+require 'pry'
+
 module Ventana
   module EditableContentHelper
     def editable_content_for(key, options={})
@@ -30,7 +32,7 @@ module Ventana
 
     def edit_link
       if (defined? current_user) && current_user.try(:can_edit?)
-        link_to("Edit", "#", class: "edit")
+        link_to("Edit", ventana.edit_editable_content_path(@key), class: "edit")
       else
         ""
       end

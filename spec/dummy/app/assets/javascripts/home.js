@@ -1,18 +1,25 @@
-$(".edit").click(function(){
+$(".edit").click(function(e){
+  e.preventDefault();
   $(".editable").html("<textarea id=editor/>")
   $.get('/ventana/editable_contents/'+$(".editable").attr('id'), function(resp){
-    $('#editor').val(resp)
+    $('#editor').val(resp);
   });
-  saveButton = $("<a href=#>Save</a>").click(function(){
+  saveButton = $("<a href=#>Save</a>").click(function(e){
     value = $("#editor").val()
-    $(".editable").html(value);
     $.ajax({
       type: 'PUT',
       url: '/ventana/editable_contents/'+$(".editable").attr('id'),
-      data: {value: value}
+      data: {value: value},
+      success: function(resp,respText){
+        console.log(resp)
+        $(".editable").html(resp);
+      },
+      error: function(a,b){
+        console.log(b)
+      }
     })
-    $(".edit").replaceWith(saveButton)
+    $(".edit").replaceWith(saveButton);
+    e.preventDefault();
   });
   $(".edit").replaceWith(saveButton)
 });
-
