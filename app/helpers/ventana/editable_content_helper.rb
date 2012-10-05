@@ -1,5 +1,3 @@
-require 'pry'
-
 module Ventana
   module EditableContentHelper
     def editable_content_for(key, options={})
