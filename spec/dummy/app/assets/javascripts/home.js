@@ -1,25 +1,32 @@
-$(".edit").click(function(e){
+$(".edit").click(function (e) {
   e.preventDefault();
-  $(".editable").html("<textarea id=editor/>")
-  $.get('/ventana/editable_contents/'+$(".editable").attr('id'), function(resp){
+  $(".editable").hide();
+  $(".editable").after("<textarea id=editor/>")
+  $.get('/ventana/editable_contents/' + $(".editable").attr('id'), function (resp) {
     $('#editor').val(resp);
   });
-  saveButton = $("<a href=#>Save</a>").click(function(e){
+  saveButton = $("<a href=# class=save>Save</a>").click(function (e) {
     value = $("#editor").val()
     $.ajax({
       type: 'PUT',
-      url: '/ventana/editable_contents/'+$(".editable").attr('id'),
-      data: {value: value},
-      success: function(resp,respText){
-        console.log(resp)
-        $(".editable").html(resp);
+      url: '/ventana/editable_contents/' + $(".editable").attr('id'),
+      data: {
+        value: value
       },
-      error: function(a,b){
+      success: function (resp, respText) {
+        $(".editable").html(resp);
+        $(".editable").show();
+        $("#editor").hide();
+        $(".save").hide();
+        $(".edit").show();
+      },
+      error: function (a, b) {
         console.log(b)
       }
     })
-    $(".edit").replaceWith(saveButton);
+    $(".edit").hide();
     e.preventDefault();
   });
-  $(".edit").replaceWith(saveButton)
+  $(".edit").hide();
+  $(".edit").after(saveButton);
 });

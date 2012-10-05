@@ -12605,3 +12605,601 @@ Processing by Ventana::EditableContentsController#update as */*
   [1m[35m (2.1ms)[0m  commit transaction
   Rendered text template (0.0ms)
 Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:37:51 -0700
+Connecting to database specified by database.yml
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (1.7ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+  Rendered pages/home.html.erb within layouts/application (63.8ms)
+Compiled application.css  (0ms)  (pid 67465)
+Compiled jquery.js  (3ms)  (pid 67465)
+Compiled jquery_ujs.js  (0ms)  (pid 67465)
+Compiled home.js  (0ms)  (pid 67465)
+Compiled application.js  (27ms)  (pid 67465)
+Completed 200 OK in 114ms (Views: 110.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-05 11:37:51 -0700
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-05 11:37:51 -0700
+Served asset /jquery.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-05 11:37:51 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-05 11:37:51 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-10-05 11:37:51 -0700
+Served asset /home.js - 200 OK (1ms)
+
+
+Started GET "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:37:55 -0700
+Processing by Ventana::EditableContentsController#show as */*
+  Parameters: {"id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:38:23 -0700
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+  Rendered pages/home.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 30ms (Views: 29.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-05 11:38:23 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-05 11:38:23 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-05 11:38:23 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-10-05 11:38:23 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-05 11:38:23 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:38:24 -0700
+Processing by PagesController#home as HTML
+  [1m[35mVentana::EditableContent Load (0.2ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:38:31 -0700
+Connecting to database specified by database.yml
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+  Rendered pages/home.html.erb within layouts/application (46.7ms)
+Completed 200 OK in 61ms (Views: 59.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:38:55 -0700
+Processing by Ventana::EditableContentsController#show as */*
+  Parameters: {"id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:38:58 -0700
+Processing by Ventana::EditableContentsController#update as */*
+  Parameters: {"value"=>" BOOM!\n==", "id"=>"home"}
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "ventana_editable_contents" SET "value" = ' BOOM!
+==', "updated_at" = '2012-10-05 18:38:58.421737' WHERE "ventana_editable_contents"."id" = 2[0m
+  [1m[35m (2.6ms)[0m  commit transaction
+  Rendered text template (0.0ms)
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:43:18 -0700
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (0.2ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+  Rendered pages/home.html.erb within layouts/application (1.5ms)
+Compiled jquery.js  (3ms)  (pid 67496)
+Compiled jquery_ujs.js  (0ms)  (pid 67496)
+Compiled home.js  (0ms)  (pid 67496)
+Compiled application.js  (30ms)  (pid 67496)
+Completed 200 OK in 44ms (Views: 43.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-05 11:43:18 -0700
+Compiled application.css  (1ms)  (pid 67496)
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-05 11:43:18 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-05 11:43:18 -0700
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-10-05 11:43:18 -0700
+Served asset /home.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-05 11:43:18 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:43:19 -0700
+Processing by Ventana::EditableContentsController#show as */*
+  Parameters: {"id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.2ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:43:24 -0700
+Processing by Ventana::EditableContentsController#update as */*
+  Parameters: {"value"=>" BOOM!!\n==", "id"=>"home"}
+  [1m[36mVentana::EditableContent Load (0.2ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "ventana_editable_contents" SET "value" = ' BOOM!!
+==', "updated_at" = '2012-10-05 18:43:24.447301' WHERE "ventana_editable_contents"."id" = 2[0m
+  [1m[35m (2.1ms)[0m  commit transaction
+  Rendered text template (0.0ms)
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:44:04 -0700
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Compiled home.js  (0ms)  (pid 67496)
+Compiled application.js  (1ms)  (pid 67496)
+Completed 200 OK in 35ms (Views: 34.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-05 11:44:05 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-05 11:44:05 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-05 11:44:05 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-05 11:44:05 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-10-05 11:44:05 -0700
+Served asset /home.js - 200 OK (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:44:17 -0700
+Processing by PagesController#home as HTML
+  [1m[35mVentana::EditableContent Load (0.2ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-05 11:44:17 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-05 11:44:17 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-10-05 11:44:17 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-05 11:44:17 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-05 11:44:17 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:44:19 -0700
+Processing by Ventana::EditableContentsController#show as */*
+  Parameters: {"id"=>"home"}
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:44:22 -0700
+Processing by Ventana::EditableContentsController#update as */*
+  Parameters: {"value"=>" BOOM!!!\n==", "id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "ventana_editable_contents" SET "value" = ' BOOM!!!
+==', "updated_at" = '2012-10-05 18:44:22.249133' WHERE "ventana_editable_contents"."id" = 2
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:44:48 -0700
+Processing by PagesController#home as HTML
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+Compiled home.js  (0ms)  (pid 67496)
+Compiled application.js  (1ms)  (pid 67496)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-05 11:44:48 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-05 11:44:48 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-05 11:44:48 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-05 11:44:48 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-10-05 11:44:48 -0700
+Served asset /home.js - 200 OK (1ms)
+
+
+Started GET "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:44:49 -0700
+Processing by Ventana::EditableContentsController#show as */*
+  Parameters: {"id"=>"home"}
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:44:54 -0700
+Processing by Ventana::EditableContentsController#update as */*
+  Parameters: {"value"=>" BOOM!!!!\n==", "id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "ventana_editable_contents" SET "value" = ' BOOM!!!!
+==', "updated_at" = '2012-10-05 18:44:54.784944' WHERE "ventana_editable_contents"."id" = 2
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:45:25 -0700
+Processing by PagesController#home as HTML
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-05 11:45:25 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-05 11:45:25 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-10-05 11:45:25 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-05 11:45:25 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-05 11:45:25 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:45:59 -0700
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-05 11:45:59 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-05 11:45:59 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-10-05 11:45:59 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-05 11:45:59 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-05 11:45:59 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:46:11 -0700
+Processing by PagesController#home as HTML
+  [1m[35mVentana::EditableContent Load (0.2ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-05 11:46:11 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-05 11:46:11 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-10-05 11:46:11 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-05 11:46:11 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-05 11:46:11 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:46:15 -0700
+Processing by Ventana::EditableContentsController#show as */*
+  Parameters: {"id"=>"home"}
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:46:33 -0700
+Processing by Ventana::EditableContentsController#update as */*
+  Parameters: {"value"=>" BOOM!!!!\n==", "id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:47:20 -0700
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (0.2ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+  Rendered pages/home.html.erb within layouts/application (1.1ms)
+Compiled home.js  (0ms)  (pid 67496)
+Compiled application.js  (1ms)  (pid 67496)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-05 11:47:20 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-05 11:47:20 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-10-05 11:47:20 -0700
+Served asset /home.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-05 11:47:20 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-05 11:47:20 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:47:21 -0700
+Processing by Ventana::EditableContentsController#show as */*
+  Parameters: {"id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:47:23 -0700
+Processing by Ventana::EditableContentsController#update as */*
+  Parameters: {"value"=>" BOOM!!!d!\n==", "id"=>"home"}
+  [1m[36mVentana::EditableContent Load (0.2ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "ventana_editable_contents" SET "value" = ' BOOM!!!d!
+==', "updated_at" = '2012-10-05 18:47:23.713295' WHERE "ventana_editable_contents"."id" = 2[0m
+  [1m[35m (2.2ms)[0m  commit transaction
+  Rendered text template (0.0ms)
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:48:00 -0700
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (0.2ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+  Rendered pages/home.html.erb within layouts/application (1.3ms)
+Compiled home.js  (0ms)  (pid 67496)
+Compiled application.js  (1ms)  (pid 67496)
+Completed 200 OK in 19ms (Views: 18.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-05 11:48:00 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-05 11:48:00 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-05 11:48:00 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-10-05 11:48:00 -0700
+Served asset /home.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-05 11:48:00 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:48:01 -0700
+Processing by Ventana::EditableContentsController#show as */*
+  Parameters: {"id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.2ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:48:06 -0700
+Processing by Ventana::EditableContentsController#update as */*
+  Parameters: {"value"=>" BOOM!!!digitgy\n==", "id"=>"home"}
+  [1m[36mVentana::EditableContent Load (0.2ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mUPDATE "ventana_editable_contents" SET "value" = ' BOOM!!!digitgy
+==', "updated_at" = '2012-10-05 18:48:06.495789' WHERE "ventana_editable_contents"."id" = 2[0m
+  [1m[35m (2.0ms)[0m  commit transaction
+  Rendered text template (0.0ms)
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:48:35 -0700
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Compiled home.js  (0ms)  (pid 67496)
+Compiled application.js  (1ms)  (pid 67496)
+Completed 200 OK in 34ms (Views: 33.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-05 11:48:35 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-05 11:48:35 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-10-05 11:48:35 -0700
+Served asset /home.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-05 11:48:35 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-05 11:48:35 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:48:37 -0700
+Processing by Ventana::EditableContentsController#show as */*
+  Parameters: {"id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.2ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:48:56 -0700
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+  Rendered pages/home.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-05 11:48:56 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-05 11:48:56 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-10-05 11:48:56 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-05 11:48:56 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-05 11:48:56 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:48:59 -0700
+Processing by Ventana::EditableContentsController#show as */*
+  Parameters: {"id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:49:12 -0700
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (0.2ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+  Rendered pages/home.html.erb within layouts/application (1.1ms)
+Compiled home.js  (0ms)  (pid 67496)
+Compiled application.js  (1ms)  (pid 67496)
+Completed 200 OK in 38ms (Views: 37.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-05 11:49:12 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-05 11:49:12 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-05 11:49:12 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-05 11:49:12 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-10-05 11:49:12 -0700
+Served asset /home.js - 200 OK (1ms)
+
+
+Started GET "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:49:15 -0700
+Processing by Ventana::EditableContentsController#show as */*
+  Parameters: {"id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.2ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:49:18 -0700
+Processing by Ventana::EditableContentsController#update as */*
+  Parameters: {"value"=>" BOOM!!!digitgy\n==!", "id"=>"home"}
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "ventana_editable_contents" SET "value" = ' BOOM!!!digitgy
+==!', "updated_at" = '2012-10-05 18:49:18.496515' WHERE "ventana_editable_contents"."id" = 2[0m
+  [1m[35m (2.0ms)[0m  commit transaction
+  Rendered text template (0.0ms)
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 2.4ms)

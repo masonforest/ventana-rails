@@ -6417,3 +6417,1051 @@ Processing by Ventana::EditableContentsController#show as HTML
   [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
 Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
   [1m[36m (0.9ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:35:43 -0700
+Processing by PagesController#home as HTML
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (35.8ms)
+Completed 200 OK in 45ms (Views: 43.6ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2012-10-05 11:35:43 -0700
+Processing by SessionsController#create as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:35:43 -0700
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+  Rendered pages/home.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ventana/editable_contents/home/edit" for 127.0.0.1 at 2012-10-05 11:35:43 -0700
+Processing by Ventana::EditableContentsController#edit as HTML
+  Parameters: {"id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  Rendered /Users/masonf/Dropbox/ventana/app/views/ventana/editable_contents/edit.html.erb (1.7ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:35:43 -0700
+Processing by Ventana::EditableContentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "value"=>"test", "commit"=>"Save \"home\"", "id"=>"home"}
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:35:43 -0700
+Processing by PagesController#home as HTML
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:35:44 -0700
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-10-05 11:35:44 -0700
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-10-05 11:35:44 -0700
+Served asset /application.js - 200 OK (11ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2012-10-05 11:35:44 -0700
+Processing by SessionsController#create as HTML
+Redirected to http://127.0.0.1:58124/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:35:44 -0700
+Processing by PagesController#home as HTML
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:35:44 -0700
+Processing by Ventana::EditableContentsController#show as */*
+  Parameters: {"id"=>"home"}
+  [1m[36mVentana::EditableContent Load (0.2ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1[0m
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:35:44 -0700
+Processing by Ventana::EditableContentsController#update as */*
+  Parameters: {"value"=>"test", "id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.2ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:35:44 -0700
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (0.2ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'test' AND "ventana_editable_contents"."content_type" = 'text' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (29.4ms)[0m  INSERT INTO "ventana_editable_contents" ("content_type", "created_at", "key", "updated_at", "value") VALUES (?, ?, ?, ?, ?)  [["content_type", :text], ["created_at", Fri, 05 Oct 2012 18:35:44 UTC +00:00], ["key", "test"], ["updated_at", Fri, 05 Oct 2012 18:35:44 UTC +00:00], ["value", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.7ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'test' AND "ventana_editable_contents"."content_type" = 'text' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "ventana_editable_contents" ("content_type", "created_at", "key", "updated_at", "value") VALUES (?, ?, ?, ?, ?)  [["content_type", :text], ["created_at", Fri, 05 Oct 2012 18:35:44 UTC +00:00], ["key", "test"], ["updated_at", Fri, 05 Oct 2012 18:35:44 UTC +00:00], ["value", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'test' AND "ventana_editable_contents"."content_type" = 'text' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "ventana_editable_contents" ("content_type", "created_at", "key", "updated_at", "value") VALUES (?, ?, ?, ?, ?)  [["content_type", :text], ["created_at", Fri, 05 Oct 2012 18:35:44 UTC +00:00], ["key", "test"], ["updated_at", Fri, 05 Oct 2012 18:35:44 UTC +00:00], ["value", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+
+
+Started PUT "/ventana/editable_contents/home?value=my+string" for 127.0.0.1 at 2012-10-05 11:35:44 -0700
+Processing by Ventana::EditableContentsController#update as HTML
+  Parameters: {"value"=>"my string", "id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.2ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  UPDATE "ventana_editable_contents" SET "value" = 'my string', "updated_at" = '2012-10-05 18:35:44.692926' WHERE "ventana_editable_contents"."id" = 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:35:44 -0700
+Processing by Ventana::EditableContentsController#show as HTML
+  Parameters: {"id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:36:02 -0700
+Processing by PagesController#home as HTML
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (35.2ms)
+Completed 200 OK in 43ms (Views: 41.0ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2012-10-05 11:36:02 -0700
+Processing by SessionsController#create as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:36:02 -0700
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+  Rendered pages/home.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ventana/editable_contents/home/edit" for 127.0.0.1 at 2012-10-05 11:36:02 -0700
+Processing by Ventana::EditableContentsController#edit as HTML
+  Parameters: {"id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  Rendered /Users/masonf/Dropbox/ventana/app/views/ventana/editable_contents/edit.html.erb (1.6ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:36:02 -0700
+Processing by Ventana::EditableContentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "value"=>"test", "commit"=>"Save \"home\"", "id"=>"home"}
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:36:02 -0700
+Processing by PagesController#home as HTML
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:36:03 -0700
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-10-05 11:36:03 -0700
+Served asset /application.css - 200 OK (4ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-10-05 11:36:03 -0700
+Served asset /application.js - 200 OK (4ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2012-10-05 11:36:03 -0700
+Processing by SessionsController#create as HTML
+Redirected to http://127.0.0.1:58134/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:36:03 -0700
+Processing by PagesController#home as HTML
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:36:03 -0700
+Processing by Ventana::EditableContentsController#show as */*
+  Parameters: {"id"=>"home"}
+  [1m[36mVentana::EditableContent Load (0.2ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1[0m
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:36:03 -0700
+Processing by Ventana::EditableContentsController#update as */*
+  Parameters: {"value"=>"test", "id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:36:03 -0700
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'test' AND "ventana_editable_contents"."content_type" = 'text' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "ventana_editable_contents" ("content_type", "created_at", "key", "updated_at", "value") VALUES (?, ?, ?, ?, ?)  [["content_type", :text], ["created_at", Fri, 05 Oct 2012 18:36:03 UTC +00:00], ["key", "test"], ["updated_at", Fri, 05 Oct 2012 18:36:03 UTC +00:00], ["value", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'test' AND "ventana_editable_contents"."content_type" = 'text' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "ventana_editable_contents" ("content_type", "created_at", "key", "updated_at", "value") VALUES (?, ?, ?, ?, ?)  [["content_type", :text], ["created_at", Fri, 05 Oct 2012 18:36:03 UTC +00:00], ["key", "test"], ["updated_at", Fri, 05 Oct 2012 18:36:03 UTC +00:00], ["value", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'test' AND "ventana_editable_contents"."content_type" = 'text' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "ventana_editable_contents" ("content_type", "created_at", "key", "updated_at", "value") VALUES (?, ?, ?, ?, ?)  [["content_type", :text], ["created_at", Fri, 05 Oct 2012 18:36:03 UTC +00:00], ["key", "test"], ["updated_at", Fri, 05 Oct 2012 18:36:03 UTC +00:00], ["value", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+
+
+Started PUT "/ventana/editable_contents/home?value=my+string" for 127.0.0.1 at 2012-10-05 11:36:03 -0700
+Processing by Ventana::EditableContentsController#update as HTML
+  Parameters: {"value"=>"my string", "id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  UPDATE "ventana_editable_contents" SET "value" = 'my string', "updated_at" = '2012-10-05 18:36:03.415872' WHERE "ventana_editable_contents"."id" = 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:36:03 -0700
+Processing by Ventana::EditableContentsController#show as HTML
+  Parameters: {"id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:36:36 -0700
+Processing by PagesController#home as HTML
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 43ms (Views: 41.1ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2012-10-05 11:36:36 -0700
+Processing by SessionsController#create as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:36:36 -0700
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+  Rendered pages/home.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ventana/editable_contents/home/edit" for 127.0.0.1 at 2012-10-05 11:36:36 -0700
+Processing by Ventana::EditableContentsController#edit as HTML
+  Parameters: {"id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  Rendered /Users/masonf/Dropbox/ventana/app/views/ventana/editable_contents/edit.html.erb (1.8ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:36:36 -0700
+Processing by Ventana::EditableContentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "value"=>"test", "commit"=>"Save \"home\"", "id"=>"home"}
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:36:36 -0700
+Processing by PagesController#home as HTML
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:36:37 -0700
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-10-05 11:36:37 -0700
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-10-05 11:36:37 -0700
+Served asset /application.js - 200 OK (4ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2012-10-05 11:36:37 -0700
+Processing by SessionsController#create as HTML
+Redirected to http://127.0.0.1:58153/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:36:37 -0700
+Processing by PagesController#home as HTML
+  [1m[35mVentana::EditableContent Load (0.2ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:36:37 -0700
+Processing by Ventana::EditableContentsController#show as */*
+  Parameters: {"id"=>"home"}
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1[0m
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:36:37 -0700
+Processing by Ventana::EditableContentsController#update as */*
+  Parameters: {"value"=>"test", "id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:36:37 -0700
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (0.2ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'test' AND "ventana_editable_contents"."content_type" = 'text' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "ventana_editable_contents" ("content_type", "created_at", "key", "updated_at", "value") VALUES (?, ?, ?, ?, ?)  [["content_type", :text], ["created_at", Fri, 05 Oct 2012 18:36:37 UTC +00:00], ["key", "test"], ["updated_at", Fri, 05 Oct 2012 18:36:37 UTC +00:00], ["value", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.7ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'test' AND "ventana_editable_contents"."content_type" = 'text' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "ventana_editable_contents" ("content_type", "created_at", "key", "updated_at", "value") VALUES (?, ?, ?, ?, ?)  [["content_type", :text], ["created_at", Fri, 05 Oct 2012 18:36:37 UTC +00:00], ["key", "test"], ["updated_at", Fri, 05 Oct 2012 18:36:37 UTC +00:00], ["value", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'test' AND "ventana_editable_contents"."content_type" = 'text' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "ventana_editable_contents" ("content_type", "created_at", "key", "updated_at", "value") VALUES (?, ?, ?, ?, ?)  [["content_type", :text], ["created_at", Fri, 05 Oct 2012 18:36:37 UTC +00:00], ["key", "test"], ["updated_at", Fri, 05 Oct 2012 18:36:37 UTC +00:00], ["value", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+
+
+Started PUT "/ventana/editable_contents/home?value=my+string" for 127.0.0.1 at 2012-10-05 11:36:37 -0700
+Processing by Ventana::EditableContentsController#update as HTML
+  Parameters: {"value"=>"my string", "id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  UPDATE "ventana_editable_contents" SET "value" = 'my string', "updated_at" = '2012-10-05 18:36:37.677848' WHERE "ventana_editable_contents"."id" = 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:36:37 -0700
+Processing by Ventana::EditableContentsController#show as HTML
+  Parameters: {"id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:39:39 -0700
+Processing by PagesController#home as HTML
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (35.9ms)
+Completed 200 OK in 43ms (Views: 41.4ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2012-10-05 11:39:39 -0700
+Processing by SessionsController#create as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:39:39 -0700
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+  Rendered pages/home.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ventana/editable_contents/home/edit" for 127.0.0.1 at 2012-10-05 11:39:39 -0700
+Processing by Ventana::EditableContentsController#edit as HTML
+  Parameters: {"id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  Rendered /Users/masonf/Dropbox/ventana/app/views/ventana/editable_contents/edit.html.erb (1.7ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:39:39 -0700
+Processing by Ventana::EditableContentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "value"=>"test", "commit"=>"Save \"home\"", "id"=>"home"}
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:39:39 -0700
+Processing by PagesController#home as HTML
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:39:40 -0700
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-10-05 11:39:40 -0700
+Compiled application.css  (0ms)  (pid 67524)
+Served asset /application.css - 200 OK (7ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-10-05 11:39:40 -0700
+Compiled jquery.js  (29ms)  (pid 67524)
+Compiled jquery_ujs.js  (0ms)  (pid 67524)
+Compiled home.js  (0ms)  (pid 67524)
+Compiled application.js  (40ms)  (pid 67524)
+Served asset /application.js - 200 OK (47ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2012-10-05 11:39:40 -0700
+Processing by SessionsController#create as HTML
+Redirected to http://127.0.0.1:58286/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:39:40 -0700
+Processing by PagesController#home as HTML
+  [1m[35mVentana::EditableContent Load (0.2ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:39:40 -0700
+Processing by Ventana::EditableContentsController#show as */*
+  Parameters: {"id"=>"home"}
+  [1m[36mVentana::EditableContent Load (0.2ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1[0m
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:39:40 -0700
+Processing by Ventana::EditableContentsController#update as */*
+  Parameters: {"value"=>"test", "id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mVentana::EditableContent Load (0.2ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'test' AND "ventana_editable_contents"."content_type" = 'text' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "ventana_editable_contents" ("content_type", "created_at", "key", "updated_at", "value") VALUES (?, ?, ?, ?, ?)[0m  [["content_type", :text], ["created_at", Fri, 05 Oct 2012 18:39:42 UTC +00:00], ["key", "test"], ["updated_at", Fri, 05 Oct 2012 18:39:42 UTC +00:00], ["value", nil]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'test' AND "ventana_editable_contents"."content_type" = 'text' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "ventana_editable_contents" ("content_type", "created_at", "key", "updated_at", "value") VALUES (?, ?, ?, ?, ?)[0m  [["content_type", :text], ["created_at", Fri, 05 Oct 2012 18:39:43 UTC +00:00], ["key", "test"], ["updated_at", Fri, 05 Oct 2012 18:39:43 UTC +00:00], ["value", nil]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'test' AND "ventana_editable_contents"."content_type" = 'text' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "ventana_editable_contents" ("content_type", "created_at", "key", "updated_at", "value") VALUES (?, ?, ?, ?, ?)[0m  [["content_type", :text], ["created_at", Fri, 05 Oct 2012 18:39:43 UTC +00:00], ["key", "test"], ["updated_at", Fri, 05 Oct 2012 18:39:43 UTC +00:00], ["value", nil]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+
+
+Started PUT "/ventana/editable_contents/home?value=my+string" for 127.0.0.1 at 2012-10-05 11:39:43 -0700
+Processing by Ventana::EditableContentsController#update as HTML
+  Parameters: {"value"=>"my string", "id"=>"home"}
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE "ventana_editable_contents" SET "value" = 'my string', "updated_at" = '2012-10-05 18:39:43.020521' WHERE "ventana_editable_contents"."id" = 1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:39:43 -0700
+Processing by Ventana::EditableContentsController#show as HTML
+  Parameters: {"id"=>"home"}
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1[0m
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:39:56 -0700
+Processing by PagesController#home as HTML
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 46ms (Views: 44.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-10-05 11:39:56 -0700
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-10-05 11:39:56 -0700
+Served asset /application.js - 200 OK (3ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2012-10-05 11:39:56 -0700
+Processing by SessionsController#create as HTML
+Redirected to http://127.0.0.1:58294/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:39:56 -0700
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+  Rendered pages/home.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:39:56 -0700
+Processing by Ventana::EditableContentsController#show as */*
+  Parameters: {"id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:39:56 -0700
+Processing by Ventana::EditableContentsController#update as */*
+  Parameters: {"value"=>"test", "id"=>"home"}
+  [1m[36mVentana::EditableContent Load (0.2ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:40:11 -0700
+Processing by PagesController#home as HTML
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 48ms (Views: 45.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-10-05 11:40:11 -0700
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-10-05 11:40:11 -0700
+Served asset /application.js - 200 OK (4ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2012-10-05 11:40:11 -0700
+Processing by SessionsController#create as HTML
+Redirected to http://127.0.0.1:58302/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:40:11 -0700
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (0.2ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+  Rendered pages/home.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:40:11 -0700
+Processing by Ventana::EditableContentsController#show as */*
+  Parameters: {"id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:40:11 -0700
+Processing by Ventana::EditableContentsController#update as */*
+  Parameters: {"value"=>"test", "id"=>"home"}
+  [1m[36mVentana::EditableContent Load (0.2ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:40:11 -0700
+Processing by PagesController#home as HTML
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:40:29 -0700
+Processing by PagesController#home as HTML
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 44ms (Views: 42.5ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2012-10-05 11:40:29 -0700
+Processing by SessionsController#create as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:40:29 -0700
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+  Rendered pages/home.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ventana/editable_contents/home/edit" for 127.0.0.1 at 2012-10-05 11:40:29 -0700
+Processing by Ventana::EditableContentsController#edit as HTML
+  Parameters: {"id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  Rendered /Users/masonf/Dropbox/ventana/app/views/ventana/editable_contents/edit.html.erb (1.7ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:40:29 -0700
+Processing by Ventana::EditableContentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "value"=>"test", "commit"=>"Save \"home\"", "id"=>"home"}
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:40:29 -0700
+Processing by PagesController#home as HTML
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:40:30 -0700
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-10-05 11:40:30 -0700
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-10-05 11:40:30 -0700
+Served asset /application.js - 200 OK (4ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2012-10-05 11:40:30 -0700
+Processing by SessionsController#create as HTML
+Redirected to http://127.0.0.1:58315/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:40:30 -0700
+Processing by PagesController#home as HTML
+  [1m[35mVentana::EditableContent Load (0.2ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:40:30 -0700
+Processing by Ventana::EditableContentsController#show as */*
+  Parameters: {"id"=>"home"}
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1[0m
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:40:30 -0700
+Processing by Ventana::EditableContentsController#update as */*
+  Parameters: {"value"=>"test", "id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.2ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:40:30 -0700
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (0.2ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'test' AND "ventana_editable_contents"."content_type" = 'text' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "ventana_editable_contents" ("content_type", "created_at", "key", "updated_at", "value") VALUES (?, ?, ?, ?, ?)  [["content_type", :text], ["created_at", Fri, 05 Oct 2012 18:40:30 UTC +00:00], ["key", "test"], ["updated_at", Fri, 05 Oct 2012 18:40:30 UTC +00:00], ["value", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.7ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'test' AND "ventana_editable_contents"."content_type" = 'text' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "ventana_editable_contents" ("content_type", "created_at", "key", "updated_at", "value") VALUES (?, ?, ?, ?, ?)  [["content_type", :text], ["created_at", Fri, 05 Oct 2012 18:40:30 UTC +00:00], ["key", "test"], ["updated_at", Fri, 05 Oct 2012 18:40:30 UTC +00:00], ["value", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'test' AND "ventana_editable_contents"."content_type" = 'text' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "ventana_editable_contents" ("content_type", "created_at", "key", "updated_at", "value") VALUES (?, ?, ?, ?, ?)  [["content_type", :text], ["created_at", Fri, 05 Oct 2012 18:40:30 UTC +00:00], ["key", "test"], ["updated_at", Fri, 05 Oct 2012 18:40:30 UTC +00:00], ["value", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+
+
+Started PUT "/ventana/editable_contents/home?value=my+string" for 127.0.0.1 at 2012-10-05 11:40:30 -0700
+Processing by Ventana::EditableContentsController#update as HTML
+  Parameters: {"value"=>"my string", "id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.2ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  UPDATE "ventana_editable_contents" SET "value" = 'my string', "updated_at" = '2012-10-05 18:40:30.485178' WHERE "ventana_editable_contents"."id" = 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:40:30 -0700
+Processing by Ventana::EditableContentsController#show as HTML
+  Parameters: {"id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:40:41 -0700
+Processing by PagesController#home as HTML
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 47ms (Views: 45.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-10-05 11:40:41 -0700
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-10-05 11:40:41 -0700
+Served asset /application.js - 200 OK (4ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2012-10-05 11:40:41 -0700
+Processing by SessionsController#create as HTML
+Redirected to http://127.0.0.1:58324/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:40:41 -0700
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+  Rendered pages/home.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:40:41 -0700
+Processing by Ventana::EditableContentsController#show as */*
+  Parameters: {"id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:40:41 -0700
+Processing by Ventana::EditableContentsController#update as */*
+  Parameters: {"value"=>"test", "id"=>"home"}
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:40:41 -0700
+Processing by PagesController#home as HTML
+  [1m[35mVentana::EditableContent Load (0.2ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:40:46 -0700
+Processing by PagesController#home as HTML
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-10-05 11:40:46 -0700
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-10-05 11:40:46 -0700
+Served asset /application.js - 200 OK (3ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2012-10-05 11:40:46 -0700
+Processing by SessionsController#create as HTML
+Redirected to http://127.0.0.1:58331/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:40:46 -0700
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (0.2ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+  Rendered pages/home.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:40:46 -0700
+Processing by Ventana::EditableContentsController#show as */*
+  Parameters: {"id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:40:46 -0700
+Processing by Ventana::EditableContentsController#update as */*
+  Parameters: {"value"=>"test", "id"=>"home"}
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:50:13 -0700
+Processing by PagesController#home as HTML
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 45ms (Views: 43.1ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2012-10-05 11:50:13 -0700
+Processing by SessionsController#create as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:50:13 -0700
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+  Rendered pages/home.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ventana/editable_contents/home/edit" for 127.0.0.1 at 2012-10-05 11:50:13 -0700
+Processing by Ventana::EditableContentsController#edit as HTML
+  Parameters: {"id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  Rendered /Users/masonf/Dropbox/ventana/app/views/ventana/editable_contents/edit.html.erb (1.6ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:50:13 -0700
+Processing by Ventana::EditableContentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "value"=>"test", "commit"=>"Save \"home\"", "id"=>"home"}
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:50:13 -0700
+Processing by PagesController#home as HTML
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:50:14 -0700
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-10-05 11:50:14 -0700
+Compiled application.css  (0ms)  (pid 67817)
+Served asset /application.css - 200 OK (8ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-10-05 11:50:14 -0700
+Compiled jquery.js  (30ms)  (pid 67817)
+Compiled jquery_ujs.js  (0ms)  (pid 67817)
+Compiled home.js  (0ms)  (pid 67817)
+Compiled application.js  (40ms)  (pid 67817)
+Served asset /application.js - 200 OK (48ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2012-10-05 11:50:14 -0700
+Processing by SessionsController#create as HTML
+Redirected to http://127.0.0.1:58517/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:50:14 -0700
+Processing by PagesController#home as HTML
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:50:14 -0700
+Processing by Ventana::EditableContentsController#show as */*
+  Parameters: {"id"=>"home"}
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1[0m
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:50:14 -0700
+Processing by Ventana::EditableContentsController#update as */*
+  Parameters: {"value"=>"test", "id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.2ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-05 11:50:14 -0700
+Processing by PagesController#home as HTML
+  [1m[36mVentana::EditableContent Load (0.1ms)[0m  [1mSELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' AND "ventana_editable_contents"."content_type" = 'markdown' LIMIT 1[0m
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'test' AND "ventana_editable_contents"."content_type" = 'text' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "ventana_editable_contents" ("content_type", "created_at", "key", "updated_at", "value") VALUES (?, ?, ?, ?, ?)  [["content_type", :text], ["created_at", Fri, 05 Oct 2012 18:50:14 UTC +00:00], ["key", "test"], ["updated_at", Fri, 05 Oct 2012 18:50:14 UTC +00:00], ["value", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'test' AND "ventana_editable_contents"."content_type" = 'text' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "ventana_editable_contents" ("content_type", "created_at", "key", "updated_at", "value") VALUES (?, ?, ?, ?, ?)  [["content_type", :text], ["created_at", Fri, 05 Oct 2012 18:50:14 UTC +00:00], ["key", "test"], ["updated_at", Fri, 05 Oct 2012 18:50:14 UTC +00:00], ["value", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'test' AND "ventana_editable_contents"."content_type" = 'text' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "ventana_editable_contents" ("content_type", "created_at", "key", "updated_at", "value") VALUES (?, ?, ?, ?, ?)  [["content_type", :text], ["created_at", Fri, 05 Oct 2012 18:50:14 UTC +00:00], ["key", "test"], ["updated_at", Fri, 05 Oct 2012 18:50:14 UTC +00:00], ["value", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+
+
+Started PUT "/ventana/editable_contents/home?value=my+string" for 127.0.0.1 at 2012-10-05 11:50:14 -0700
+Processing by Ventana::EditableContentsController#update as HTML
+  Parameters: {"value"=>"my string", "id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  UPDATE "ventana_editable_contents" SET "value" = 'my string', "updated_at" = '2012-10-05 18:50:14.775217' WHERE "ventana_editable_contents"."id" = 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/ventana/editable_contents/home" for 127.0.0.1 at 2012-10-05 11:50:14 -0700
+Processing by Ventana::EditableContentsController#show as HTML
+  Parameters: {"id"=>"home"}
+  [1m[35mVentana::EditableContent Load (0.1ms)[0m  SELECT "ventana_editable_contents".* FROM "ventana_editable_contents" WHERE "ventana_editable_contents"."key" = 'home' LIMIT 1
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m

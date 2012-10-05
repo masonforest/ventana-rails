@@ -9,12 +9,26 @@ module Ventana
           content_type: options[:type]
       ).first_or_create
 
-      (edit_link + editable_div).html_safe
+      ventana_block
     end
+
     private
 
     def key
       @editable_content.key
+    end
+
+    def ventana_block
+      content_tag(:div,
+        (edit_link + editable_div),
+          class: "ventana-block",
+          id: id
+        )
+
+    end
+
+    def id
+      "ventana-#{@key}"
     end
 
     def editable_div
