@@ -23,7 +23,7 @@ module Ventana
         (edit_link + editable_div),
           class: "ventana-block",
           id: id
-        )
+        ).html_safe
 
     end
 
@@ -46,7 +46,7 @@ module Ventana
       if (defined? current_user) && current_user.try(:can_edit?)
         link_to("Edit", ventana.edit_editable_content_path(@key), class: "edit")
       else
-        ""
+        "".html_safe
       end
     end
   end
