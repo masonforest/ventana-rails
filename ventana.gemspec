@@ -7,11 +7,11 @@ require "ventana/version"
 Gem::Specification.new do |s|
   s.name        = "ventana"
   s.version     = Ventana::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
+  s.authors     = ["Mason Fischer"]
+  s.email       = ["mason@thoughtbot.com"]
   s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Ventana."
-  s.description = "TODO: Description of Ventana."
+  s.summary     = "Ventana is a lightweight rails content management system."
+  s.description = "Ventana is a lightweight rails content management system. It allows the developer to specify small blocks of unstructured editable content. This is helpful for landing pages and small blocks for unstructured copy text."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
 

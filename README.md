@@ -13,9 +13,12 @@ Include the gem in your Gemfile:
     gem 'ventana', git: 'git://github.com/thoughtbot/ventana.git'
 
 Then run
+
     rake ventana:install:migrations
     rake db:migrate
+
 Finally add the following to you config/routes.rb
+
     mount Ventana::Engine => "/ventana"
 
 Quick Start
