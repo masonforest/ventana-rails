@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Ventana::VERSION
   s.authors     = ["Mason Fischer"]
   s.email       = ["mason@thoughtbot.com"]
-  s.homepage    = "TODO"
+  s.homepage    = "https://github.com/thoughtbot/ventana"
   s.summary     = "Ventana is a lightweight rails content management system."
   s.description = "Ventana is a lightweight rails content management system. It allows the developer to specify small blocks of unstructured editable content. This is helpful for landing pages and small blocks for unstructured copy text."
 
