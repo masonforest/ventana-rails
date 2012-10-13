@@ -3,12 +3,12 @@ require 'spec_helper'
 describe 'VentanaHelper' do
   describe "editable_content_for" do
     include Ventana::EditableContentHelper
-    it 'is wrapped in a div with the id of key' do
+    it 'is wrapped in a div with the id of key prepended with ventana' do
       user = mock('user', can_edit?: true)
       self.should_receive(:current_user).once.and_return(user)
       key = 'test'
 
-      editable_content_for(key).should have_tag("##{key}")
+      editable_content_for(key).should have_tag("#ventana-#{key}")
     end
 
     it 'is wrapped in a div with the class of editable' do

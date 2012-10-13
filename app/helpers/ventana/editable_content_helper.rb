@@ -22,7 +22,8 @@ module Ventana
       content_tag(:div,
         (edit_link + editable_div),
           class: "ventana-block",
-          id: id
+          id: id,
+          data: { key: key }
         ).html_safe
 
     end
@@ -34,7 +35,6 @@ module Ventana
     def editable_div
       content_tag(:div,
         content,
-        id: @key,
         class: "editable").html_safe
     end
 
