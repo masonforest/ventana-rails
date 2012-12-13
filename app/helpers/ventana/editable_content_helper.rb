@@ -5,8 +5,8 @@ module Ventana
       @key = key
       @editable_content =
         Ventana::EditableContent.where(
-          key: key,
-          content_type: options[:type]
+          key: key.to_s,
+          content_type: options[:type].to_s
       ).first_or_create
 
       ventana_block
