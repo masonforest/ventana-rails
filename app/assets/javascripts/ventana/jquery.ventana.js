@@ -73,5 +73,7 @@
       });
     }
   };
-  $(".ventana-block").ventana();
 })(jQuery);
+$(function(){
+  $(".ventana-block").ventana();
+});
