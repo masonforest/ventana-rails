@@ -1,24 +1,27 @@
-.edit, .save
-  border: 1px solid #3371b2
-  border-color: #3371b2 #2457a3 #164297
-  -webkit-border-radius: 16px
-  border-radius: 16px
-  -webkit-box-shadow: inset 0 1px 0 0 #64a9f2, 0 1px 2px 0 #b3b3b3
-  box-shadow: inset 0 1px 0 0 #64a9f2, 0 1px 2px 0 #b3b3b3
-  color: white
-  display: inline-block
-  font-size: 11px
-  font-weight: normal
-  line-height: 1
-  background-color: #4294f0
-  padding: 2px 5px
-  position: absolute
-  top: 0
-  right: 10px
-  opacity: 0
-  transition: opacity .5s ease-in-out
-  -moz-transition: opacity .5s ease-in-out
-  -webkit-transition: opacity .5s ease-in-out
+.ventana-block .editable
+  .edit, .save
+    font-family: sans-serif
+    text-decoration: none
+    border: 1px solid #3371b2
+    border-color: #3371b2 #2457a3 #164297
+    -webkit-border-radius: 16px
+    border-radius: 16px
+    -webkit-box-shadow: inset 0 1px 0 0 #64a9f2, 0 1px 2px 0 #b3b3b3
+    box-shadow: inset 0 1px 0 0 #64a9f2, 0 1px 2px 0 #b3b3b3
+    color: white
+    display: inline-block
+    font-size: 11px
+    font-weight: normal
+    line-height: 1
+    background-color: #4294f0
+    padding: 2px 5px
+    position: absolute
+    top: 0
+    right: 10px
+    opacity: 0
+    transition: opacity .5s ease-in-out
+    -moz-transition: opacity .5s ease-in-out
+    -webkit-transition: opacity .5s ease-in-out
 
 .ventana-block
   box-sizing: border-box
@@ -31,7 +34,7 @@
   transition: border-color .5s ease-in-out
   -moz-transition: border-color .5s ease-in-out
   -webkit-transition: border-color .5s ease-in-out
-  &:hover, .editing
+  &:hover, &.editing
     border-color: rgba(180, 180, 255, 1)
     transition: border-color .5s ease-in-out
     -moz-transition: border-color .5s ease-in-out

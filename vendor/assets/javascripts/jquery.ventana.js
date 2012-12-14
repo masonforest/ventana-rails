@@ -1,4 +1,4 @@
-// = require jquery.autogrow
+//= require jquery.autogrow
 
 (function ($) {
 
@@ -41,6 +41,7 @@
           }
         })
         $(this).parent().find(".edit").hide();
+        $(this).parents(".ventana-block").removeClass("editing");
         e.preventDefault();
       }).hide());
 
@@ -48,8 +49,10 @@
         e.preventDefault();
         $(this).parent().find(".save").show();
         editor = $("<textarea class=editor/>")
-        editor.width($(this).parent().find(".editable").width());
+        editor.width($(this).parent().find(".editable").width() - 10);
+        editor.height($(this).parent().find(".editable").height());
         $(this).parent().find(".editable").hide();
+        $(this).parents(".ventana-block").addClass("editing");
         editor.css("display","block")
         $(this).parent().find(".editable").after(editor);
         $.ajax({
@@ -58,6 +61,7 @@
           context: this,
           success: function (resp) {
             $(this).parent().find('textarea').val(resp);
+            $(this).parent().find('textarea').autogrow();
           }
         });
         $(this).parent().find(".edit").hide();
