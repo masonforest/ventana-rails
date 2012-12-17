@@ -9,7 +9,7 @@
   <div>
   <% if current_user.present? %>
     Welcome <%= current_user.name %>
-    <%= link_to "Logout", sessions_path(1), :method => 'delete' %>
+    <%= link_to "Logout", session_path(1), :method => 'delete' %>
   <% else %>
     <%= link_to "Login", sessions_path, :method => 'post' %>
   <% end %>

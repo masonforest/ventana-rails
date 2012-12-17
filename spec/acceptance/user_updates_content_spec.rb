@@ -15,7 +15,7 @@ feature 'user can update content' do
     visit '/'
     click_link 'Login'
     click_link 'Edit'
-    find('.editor').set('test')
+    find('.ventana-editor').set('test')
     click_link 'Save'
     page.should have_content('test')
     page.should have_content('Edit')
@@ -29,13 +29,13 @@ feature 'user can update content' do
 
     within("#ventana-about") do
       click_link 'Edit'
-      find('.editor').set('about test')
+      find('.ventana-editor').set('about test')
       click_link 'Save'
     end
 
     within("#ventana-home") do
       click_link 'Edit'
-      find('.editor').set('home test')
+      find('.ventana-editor').set('home test')
       click_link 'Save'
     end
 

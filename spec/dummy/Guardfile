@@ -1,0 +1,3 @@
+guard 'rails' do
+  watch(%r{^../../.*})
+end

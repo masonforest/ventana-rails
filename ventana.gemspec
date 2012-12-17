@@ -26,4 +26,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rspec-tag_matchers"
   s.add_development_dependency "factory_girl"
   s.add_development_dependency "pry"
+  s.add_development_dependency "guard-rails"
+  s.add_development_dependency "rb-fsevent"
 end

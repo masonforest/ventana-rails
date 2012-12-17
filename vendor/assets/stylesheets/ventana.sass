@@ -1,5 +1,5 @@
 .ventana-block
-  .edit, .save
+  .ventana-edit, .ventana-save
     font-family: sans-serif
     text-decoration: none
     border: 1px solid #3371b2
@@ -17,19 +17,19 @@
     position: absolute
     text-align: center
     top: 5px
-    right: 5px
+    right: 7px
     opacity: 0
     transition: opacity .5s ease-in-out
     -moz-transition: opacity .5s ease-in-out
     -webkit-transition: opacity .5s ease-in-out
-  .save
+  .ventana-save
     border-color: #3371b2 #2457a3 #164297
     text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.5)
     background-color: #4294f0
     -webkit-box-shadow: inset 0 1px 0 0 #64a9f2, 0 1px 2px 0 #b3b3b3
     box-shadow: inset 0 1px 0 0 #64a9f2, 0 1px 2px 0 #b3b3b3
     box-shadow: inset 0 1px 0 0 #64a9f2, 0 1px 2px 0 #b3b3b3
-  .edit
+  .ventana-edit
     border-color: #a6adb5
     color: #555
     background-color: #dadfe5
@@ -37,11 +37,10 @@
     -webkit-box-shadow: inset 0 1px 0 0 #f0f4f8, 0 1px 1px 0 #a5a6a8
     box-shadow: inset 0 1px 0 0 #f0f4f8, 0 1px 1px 0 #a5a6a8
 
-
 .ventana-block
-  box-sizing: border-box
-  -moz-box-sizing: border-box
-  -webkit-box-sizing: border-box
+  border: 2px solid transparent
+
+.ventana-block.ventana-editable
   position: relative
   border-width: 2px
   border-style: dashed
@@ -49,12 +48,12 @@
   transition: border-color .5s ease-in-out
   -moz-transition: border-color .5s ease-in-out
   -webkit-transition: border-color .5s ease-in-out
-  &:hover, &.editing
+  &:hover
     border-color: rgba(40, 180, 239, .8)
     transition: border-color .5s ease-in-out
     -moz-transition: border-color .5s ease-in-out
     -webkit-transition: border-color .5s ease-in-out
-    .edit, .save
+    .ventana-edit, .ventana-save
       transition: opacity .5s ease-in-out
       -moz-transition: opacity .5s ease-in-out
       -webkit-transition: opacity .5s ease-in-out

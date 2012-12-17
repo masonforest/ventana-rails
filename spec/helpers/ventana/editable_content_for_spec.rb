@@ -4,8 +4,8 @@ describe 'VentanaHelper' do
   describe "editable_content_for" do
     include Ventana::EditableContentHelper
     it 'is wrapped in a div with the id of key prepended with ventana' do
-      user = mock('user', can_edit?: true)
-      self.should_receive(:current_user).once.and_return(user)
+      user = mock('user', can_edit_with_ventana?: true)
+      self.should_receive(:current_user).twice.and_return(user)
       key = 'test'
 
       editable_content_for(key).should have_tag("#ventana-#{key}")
@@ -13,16 +13,16 @@ describe 'VentanaHelper' do
 
     it 'is wrapped in a div with the class of editable' do
       key = 'test'
-      user = mock('user', can_edit?: true)
-      self.should_receive(:current_user).once.and_return(user)
+      user = mock('user', can_edit_with_ventana?: true)
+      self.should_receive(:current_user).twice.and_return(user)
 
-      editable_content_for(key).should have_tag(".editable")
+      editable_content_for(key).should have_tag(".ventana-editable")
     end
 
     it 'contains a link to edit the content' do
       key = 'test'
-      user = mock('user', can_edit?: true)
-      self.should_receive(:current_user).once.and_return(user)
+      user = mock('user', can_edit_with_ventana?: true)
+      self.should_receive(:current_user).twice.and_return(user)
 
       editable_content_for(key).should have_tag("a")
     end
@@ -35,12 +35,12 @@ describe 'VentanaHelper' do
                                        content_type: :markdown)
       Ventana::EditableContent.stub_chain(
         :where,
-        :first_or_create).
+        :first).
         and_return(editable_content)
       content_type = :markdown
-      user = mock('user', can_edit?: true)
+      user = mock('user', can_edit_with_ventana?: true)
 
-      self.should_receive(:current_user).once.and_return(user)
+      self.should_receive(:current_user).twice.and_return(user)
 
       editable_content_for(key).should include("<em>Welcome</em>")
     end

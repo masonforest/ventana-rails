@@ -19,9 +19,10 @@
 
     init: function () {
       var _this = this;
-      $(_this.$el).find(".edit").after(
-      $("<a href=# class=save>Save</a>").click(function (e) {
+      $(_this.$el).find(".ventana-edit").after(
+      $("<a href=# class=ventana-save>Save</a>").click(function (e) {
         value = $(this).parent().find("textarea").val()
+        console.log(value)
         $.ajax({
           type: 'PUT',
           url: '/ventana/editable_contents/' + $(this).parent().data('key'),
@@ -30,31 +31,31 @@
           },
           context: this,
           success: function (resp) {
-            $(this).parent().find(".editable").html(resp);
-            $(this).parent().find(".editable").show();
-            $(this).parent().find(".editor").hide();
-            $(this).parent().find(".save").hide();
-            $(this).parent().find(".edit").show();
+            $(this).parent().find(".ventana-content").html(resp);
+            $(this).parent().find(".ventana-content").show();
+            $(this).parent().find(".ventana-editor").hide();
+            $(this).parent().find(".ventana-save").hide();
+            $(this).parent().find(".ventana-edit").show();
           },
           error: function (a, b) {
             console.log(b)
           }
         })
-        $(this).parent().find(".edit").hide();
-        $(this).parents(".ventana-block").removeClass("editing");
+        $(this).parent().find(".ventana-edit").hide();
+        $(this).parents(".ventana-block").removeClass(".ventana-editing");
         e.preventDefault();
       }).hide());
 
-      $(_this.$el).find(".edit").click(function (e) {
+      $(_this.$el).find(".ventana-edit").click(function (e) {
         e.preventDefault();
-        $(this).parent().find(".save").show();
-        editor = $("<textarea class=editor/>")
-        editor.width($(this).parent().find(".editable").width() - 10);
-        editor.height($(this).parent().find(".editable").height());
-        $(this).parent().find(".editable").hide();
-        $(this).parents(".ventana-block").addClass("editing");
+        $(this).parent().find(".ventana-save").show();
+        editor = $("<textarea class=ventana-editor/>")
+        editor.width($(this).parent().find(".ventana-content").width() - 10);
+        editor.height($(this).parent().find(".ventana-content").height());
+        $(this).parent().find(".ventana-content").hide();
+        $(this).parents(".ventana-block").addClass("ventana-editing");
         editor.css("display","block")
-        $(this).parent().find(".editable").after(editor);
+        $(this).parent().find(".ventana-content").after(editor);
         $.ajax({
           type: 'GET',
           url: '/ventana/editable_contents/' + $(this).parent().data('key'),
@@ -64,7 +65,7 @@
             $(this).parent().find('textarea').autogrow();
           }
         });
-        $(this).parent().find(".edit").hide();
+        $(this).parent().find(".ventana-edit").hide();
       });
     }
   };

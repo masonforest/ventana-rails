@@ -1,5 +1,6 @@
 module Ventana
   module EditableContentHelper
+    DEFAULT_TEXT = "Welcome to ventana, hover to edit."
     def editable_content_for(key, options={})
       options[:type] ||= :text
       @key = key
@@ -7,7 +8,13 @@ module Ventana
         Ventana::EditableContent.where(
           key: key.to_s,
           content_type: options[:type].to_s
-      ).first_or_create
+      ).first ||
+        Ventana::EditableContent.create(
+          key: key.to_s,
+          content_type: options[:type].to_s,
+          value: "Welcome to ventana, hover to edit."
+        )
+
 
       ventana_block
     end
@@ -21,7 +28,7 @@ module Ventana
     def ventana_block
       content_tag(:div,
         (edit_link + editable_div),
-          class: "ventana-block",
+          class: block_classes,
           id: id,
           data: { key: key }
         ).html_safe
@@ -35,7 +42,7 @@ module Ventana
     def editable_div
       content_tag(:div,
         content,
-        class: "editable").html_safe
+        class: "ventana-content").html_safe
     end
 
     def content
@@ -43,11 +50,25 @@ module Ventana
     end
 
     def edit_link
-      if (defined? current_user) && current_user.try(:can_edit?)
-        link_to("Edit", ventana.edit_editable_content_path(@key), class: "edit")
+      if can_edit?
+        link_to("Edit", ventana.edit_editable_content_path(@key), class: "ventana-edit")
       else
         "".html_safe
       end
+    end
+
+    def block_classes
+      classes = ["ventana-block"]
+
+      classes.tap do |classes|
+        if can_edit?
+          classes << "ventana-editable"
+        end
+      end
+    end
+
+    def can_edit?
+      (defined? current_user) && current_user.try(:can_edit_with_ventana?)
     end
   end
 end
