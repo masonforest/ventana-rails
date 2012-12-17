@@ -2,7 +2,7 @@ module Ventana
   module EditableContentHelper
     DEFAULT_TEXT = "Welcome to ventana, hover to edit."
     def editable_content_for(key, options={})
-      options[:type] ||= :text
+      options[:type] ||= :markdown
       @key = key
       @editable_content =
         Ventana::EditableContent.where(
