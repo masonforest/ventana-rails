@@ -22,7 +22,6 @@
       $(_this.$el).find(".ventana-edit").after(
       $("<a href=# class=ventana-save>Save</a>").click(function (e) {
         value = $(this).parent().find("textarea").val()
-        console.log(value)
         $.ajax({
           type: 'PUT',
           url: '/ventana/editable_contents/' + $(this).parent().data('key'),
@@ -38,7 +37,7 @@
             $(this).parent().find(".ventana-edit").show();
           },
           error: function (a, b) {
-            console.log(b)
+            console.log(b);
           }
         })
         $(this).parent().find(".ventana-edit").hide();

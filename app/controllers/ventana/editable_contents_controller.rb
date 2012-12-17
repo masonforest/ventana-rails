@@ -1,5 +1,6 @@
 class Ventana::EditableContentsController < ApplicationController
   layout false
+  before_filter :authorize
 
   def show
     render text: Ventana::EditableContent.find_by_key(params[:id]).value
@@ -18,5 +19,15 @@ class Ventana::EditableContentsController < ApplicationController
   def edit
     @editable_content = Ventana::EditableContent.
         find_or_create_by_key(params[:id])
+  end
+
+  def authorize
+    if !authorized?
+      return render text: "Unauthorized", status: 401
+    end
+  end
+
+  def authorized?
+    (defined? current_user) && current_user.try(:can_edit_with_ventana?)
   end
 end
