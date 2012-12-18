@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 3.2.8"
   s.add_dependency "redcarpet"
+  s.add_dependency "paper_trail"
   s.add_dependency "sass-rails"
 
   s.add_development_dependency "sqlite3"

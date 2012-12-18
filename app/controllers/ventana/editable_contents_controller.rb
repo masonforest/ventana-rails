@@ -30,4 +30,8 @@ class Ventana::EditableContentsController < ApplicationController
   def authorized?
     (defined? current_user) && current_user.try(:can_edit_with_ventana?)
   end
+
+  def user_for_paper_trail
+    current_user.try(:name)
+  end
 end

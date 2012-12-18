@@ -1,0 +1,7 @@
+<table>
+<%- @versions.each do |version| %>
+  <tr>
+    <td><%= version.reify.try(:key) %> updated by <%= version.whodunnit %> <%=  time_ago_in_words(version.created_at) %> ago</td><td><%= button_to "Undo", revert_version_path(version)%></td>
+  </tr>
+<% end %>
+</table>
