@@ -41,7 +41,7 @@
           }
         })
         $(this).parent().find(".ventana-edit").hide();
-        $(this).parents(".ventana-block").removeClass(".ventana-editing");
+        $(this).parents(".ventana-block").removeClass("ventana-editing");
         e.preventDefault();
       }).hide());
 
